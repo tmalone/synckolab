@@ -1,0 +1,110 @@
+<!-- buttons -->
+<!ENTITY synckolab.syncMenu.label				"Start SyncKolab">
+<!ENTITY synckolab.optionMenu.label				"SyncKolab Options">
+
+<!ENTITY synckolab.sync.label					"Sync Kolab">
+<!ENTITY synckolab.sync.tip						"Synchronize Kolab Folders">
+
+<!ENTITY synckolab.contactConflict.dialogTitle		"Contact Conflict">
+<!ENTITY synckolab.contactConflict.dialogMessage	"Conflicts detected. Please select which version to use for each field.">
+<!ENTITY synckolab.contactConflict.Internet.box		"Internet">
+<!ENTITY synckolab.contactConflict.Phones.box		"Phones">
+<!ENTITY synckolab.contactConflict.Home.box			"Home">
+<!ENTITY synckolab.contactConflict.Notes.box			"Notes">
+<!ENTITY synckolab.contactConflict.Other.box			"Other">
+
+<!ENTITY synckolab.settings.Account		"Account">
+<!ENTITY synckolab.settings.abook		"Address Book">
+<!ENTITY synckolab.settings.Contact		"Contact">
+<!ENTITY synckolab.settings.Calendar	"Calendar">
+<!ENTITY synckolab.settings.Tasks		"Tasks">
+
+<!ENTITY synckolab.settings.ContactFolder	"Contact Folder">
+<!ENTITY synckolab.settings.ContactFormat	"Contact Format">
+<!ENTITY synckolab.settings.SaveToImap		"Save to Imap Folder">
+<!ENTITY synckolab.settings.Configuration	"Configuration">
+<!ENTITY synckolab.settings.CalendarFormat	"Calendar Format">
+<!ENTITY synckolab.settings.CalendarFolder	"Calendar Folder">
+<!ENTITY synckolab.settings.TaskFormat		"Format">
+<!ENTITY synckolab.settings.TaskFolder		"Folder">
+<!ENTITY synckolab.settings.SyncContacts	"Sync Contacts">
+<!ENTITY synckolab.settings.SyncCalendar	"Sync Calendar">
+<!ENTITY synckolab.settings.SyncTasks		"Sync Tasks">
+<!ENTITY synckolab.settings.CloseWindow		"Close Sync Window when done">
+<!ENTITY synckolab.settings.add				"New">
+<!ENTITY synckolab.settings.load			"Load">
+<!ENTITY synckolab.settings.saveSingle		"Export">
+<!ENTITY synckolab.settings.saveAll			"Export All">
+<!ENTITY synckolab.settings.del				"Delete">
+<!ENTITY synckolab.settings.SyncCalendar	"Sync calendar">
+<!ENTITY synckolab.settings.SyncCalendarTip	"activate if you want to synchronize the calendar with the configuration">
+<!ENTITY synckolab.settings.SyncContacts	"Sync contacts">
+<!ENTITY synckolab.settings.SyncContactsTip	"activate if you want to synchronize the address book with the configuration">
+<!ENTITY synckolab.settings.SyncTasks		"Sync tasks">
+<!ENTITY synckolab.settings.SyncTasksTip	"activate if you want to synchronize the tasks with the configuration">
+<!ENTITY synckolab.settings.FormatTip		"Choose the XML format if you have a Kolab2 server. Otherwise stay with the vcard/ical standard.">
+<!ENTITY synckolab.settings.DefaultResolve	"On sync conflict: ">
+<!ENTITY synckolab.settings.ResolveAsk		"ask">
+<!ENTITY synckolab.settings.ResolveServer	"use server version">
+<!ENTITY synckolab.settings.ResolveClient	"use local version">
+<!ENTITY synckolab.settings.ResolveSmart	"Automatic merge and resolve">
+<!ENTITY synckolab.settings.CalSyncTimeframe	"Ignore entries older than ">
+<!ENTITY synckolab.settings.TimeframeSyncDays	" days (-1: none)">
+
+<!ENTITY synckolab.settings.Updates			"For updates please check out:">
+
+<!ENTITY synckolab.settings.imapAcctTip 			"Only imap accounts are supported, other account types will not sync.">
+<!ENTITY synckolab.settings.SyncKolabHeader			"SyncKolab">
+<!ENTITY synckolab.settings.SyncKolabDescription 	"SyncKolab allows you to synchronize your contacts and your calendar entries over multiple machines using only a standard imap server.">
+<!ENTITY synckolab.settings.DescKolabServer 		"For full groupware support you might want to take a look at the kolab server: ">
+<!ENTITY synckolab.settings.DescOtherClients 		"Other clients SyncKolab is compatible with: ">
+
+<!-- log level -->
+<!ENTITY synckolab.debugLevel						"Error Console Level" >
+<!ENTITY synckolab.logError							"Only Errors" >
+<!ENTITY synckolab.logWarning						"Warnings" >
+<!ENTITY synckolab.logInfo							"Information" >
+<!ENTITY synckolab.logDebug							"Everything (Debug)" >
+<!ENTITY synckolab.settings.SyncOnStart				"Automatically sync on start">
+
+<!-- Account Tab -->
+<!ENTITY synckolab.settings.AccountDescription	"Please select an IMAP Account for the synchronization">
+<!ENTITY synckolab.settings.SyncInterval 		"Sync-interval: ">
+<!ENTITY synckolab.settings.SyncIntervalDescription "Define the interval in which SyncKolab will check for updates. Use 0 for manual update only.">
+<!ENTITY synckolab.settings.SyncIntervalMinutes "minutes">
+<!ENTITY synckolab.settings.SaveToImapTip		"Uncheck this, if you do not want anything written to the imap server (read only)">
+<!ENTITY synckolab.settings.HiddenWindow		"Hide the status window when syncing automatically">
+
+<!-- New Config Wizard -->
+<!ENTITY synckolab.newwizard.title 		"SyncKolab Setup Wizard">
+<!ENTITY synckolab.wizard.LongDescription	"In the following pages you can choose for each type (calendar, adressbook, tasks) the folder on the imap server with which to sync. Yoou can also specify if you want to use the read only mode (nothing is written back to the imap server - for shared folders) and the type (xml for Kolab2 or vcard/ical).">
+<!ENTITY synckolab.newwizard.intro 		"SyncKolab allows you to synchronize your contacts and your calendar entries over multiple machines using only an imap server.">
+<!ENTITY synckolab.newwizard.selectAccount	"Please select an IMAP Account for the synchronization">
+<!ENTITY synckolab.newwizard.configName	"Display-name">
+<!ENTITY synckolab.newwizard.descName "The display-name has no function other than for you to identify the configuration. It makes sense to have descriptive names if you have multiple configurations/folders to sync (i.e. SharedAddresses, Office Calendar, Home Tasks). Make sure you do not already have a configuration with that name and that it does not include special characters like .-[]# ">
+<!ENTITY synckolab.wizard.AccountIntervalDescription "Select an IMAP account and specify your basic sync settings">
+<!ENTITY synckolab.wizard.typePageDesc	"Specify which information should be synchronized with the selected IMAP account">
+<!ENTITY synckolab.wizard.typePageLongDesc	"For each SyncKolab configuration you can use the folders of one imap account to synchronize each a selectable folder with either an address book, a calendar and/or a task list">
+<!ENTITY synckolab.wizard.typePageContact	"Activate this if you want to sync contacts from an imap folder with a local thunderbird address-book">
+<!ENTITY synckolab.wizard.typePageCalendar	"Activate this if you want to sync events from an imap folder with a local calendar">
+<!ENTITY synckolab.wizard.typePageTasks		"Activate this if you want to sync tasks from an imap folder with a local calendar's task list">
+<!ENTITY synckolab.wizard.conPageInfo	"Select the adress book and the folder to be synchronized. ">
+<!ENTITY synckolab.wizard.calPageInfo	"Select the calendar and the folder to be synchronized.">
+<!ENTITY synckolab.wizard.taskPageInfo	"Select the calendar for tasks and the folder to be synchronized.">
+<!ENTITY synckolab.newwizard.DoneText	"You successfully setup a new configuration with SyncKolab. You can now start the sync by choosing 'Tools-Start SyncKolab'.">
+<!ENTITY synckolab.newwizard.DoneText2	"In case you encounter an error (i.e. the sync suddenly stopps or some of your entries have been misinterpreted while syncing - please only with error messages from 'Tools-Error console') or if you have any suggestions, fell free to contact us on the mailing list or create new bugzilla entry on">
+
+<!-- other -->
+<!ENTITY synckolab.with			"with">
+<!ENTITY synckolab.proprietary 	"proprietary">
+
+<!-- progress window -->
+<!ENTITY synckolab.progress.Pause			"Pause">
+<!ENTITY synckolab.progress.UnPause			"Resume">
+<!ENTITY synckolab.progress.Cancel			"Cancel">
+<!ENTITY synckolab.progress.CurrentProgress	"Current Progress">
+<!ENTITY synckolab.progress.status			"Status">
+<!ENTITY synckolab.progress.content			"Content">
+<!ENTITY synckolab.progress.message			"Message">
+<!ENTITY synckolab.progress.CurrentAction	"Current Action">
+<!ENTITY synckolab.progress.Processing		"Processing">

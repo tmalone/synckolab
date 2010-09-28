@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://synckolab/skin/synckolab.css" type="text/css"?>
+
+<!DOCTYPE overlay [
+<!ENTITY % messengerDTD SYSTEM "chrome://messenger/locale/messenger.dtd" >
+%messengerDTD;
+<!ENTITY % window SYSTEM "chrome://synckolab/locale/synckolab.dtd" >
+%window;
+]>  
+
+<overlay id="synckolabTbOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<keyset id="mailKeys">
+		<key id="key_synckolab_sync" modifiers="shift,alt,control,accel" keycode="VK_SCROLL_LOCK" command="cmd_synckolab_sync"/>
+	</keyset>
+	
+	<commandset id="mailCommands">
+		<command id="cmd_synckolab_sync"
+			tooltiptext="&synckolab.sync.tip;"
+			oncommand="com.synckolab.main.sync('manual');"/>
+		<command id="cmd_synckolab_options"
+	        oncommand="window.open('chrome://synckolab/content/synckolabPref.xul', 'options', 'chrome,resizable=1');"/>
+	</commandset>
+
+	<stringbundleset id="stringbundleset">
+		<stringbundle src="chrome://synckolab/locale/synckolab.properties" id="synckolabBundle" /> 
+	</stringbundleset>
+	
+	<script type="application/x-javascript" src="chrome://global/content/nsUserSettings.js"/>
+
+	<!--- synckolab is the first -->
+	<script type="application/x-javascript" src="chrome://synckolab/content/synckolab.js"/>
+
+	<!-- the sync modules -->
+	<script type="application/x-javascript" src="chrome://synckolab/content/addressbook.js"/>
+	<script type="application/x-javascript" src="chrome://synckolab/content/calendar.js"/>
+
+	<!-- utils -->
+	<script type="application/x-javascript" src="chrome://synckolab/content/config.js"/>
+	<script type="application/x-javascript" src="chrome://synckolab/content/tools.js"/>
+	<script type="application/x-javascript" src="chrome://synckolab/content/tools/sha1.js"/>
+	<script type="application/x-javascript" src="chrome://synckolab/content/tools/kolab.js"/>
+	<script type="application/x-javascript" src="chrome://synckolab/content/tools/text.js"/>
+	<script type="application/x-javascript" src="chrome://synckolab/content/addressbookTools.js"/>
+	<script type="application/x-javascript" src="chrome://synckolab/content/calendarTools.js"/>
+	<script type="application/x-javascript" src="chrome://synckolab/content/contactConflictTools.js"/>
+
+	<script type="application/x-javascript" src="chrome://synckolab/content/jslib/jslib.js"/>
+
+	<script type="application/x-javascript" src="chrome://messenger/content/am-smtp.js"/>
+	<script type="application/x-javascript" src="chrome://messenger/content/AccountManager.js"/>
+
+	<script type="application/x-javascript">
+		window.addEventListener("load", com.synckolab.main.syncKolabTimer, false);
+		window.document.getElementById('folderTree').addEventListener("click", com.synckolab.main.groupwareActions, false);  
+	</script>
+    
+    <!-- calendar -->
+<script type="application/x-javascript">
+  var gCalendarBundle = {
+  	getString: function (s) { return s;
+  	}
+  };
+</script>  
+		
+	<menupopup id="taskPopup">
+        <menuseparator/>
+		<menuitem id="SyncKolab-Sync" command="cmd_synckolab_sync" label="&synckolab.syncMenu.label;"/>
+		<menuitem id="SyncKolab-Options" command="cmd_synckolab_options" label="&synckolab.optionMenu.label;"/>
+	</menupopup>
+    <toolbarpalette id="MailToolbarPalette">
+        <toolbarbutton id="SyncKolab-button" command="cmd_synckolab_sync" class="toolbarbutton-1" label="&synckolab.sync.label;"/>
+    </toolbarpalette>
+    
+</overlay>
